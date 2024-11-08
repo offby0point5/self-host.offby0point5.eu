@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>offby0point5</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://blog.offby0point5.de/style.css">
+    <link rel="stylesheet" href="https://blog.offby0point5.de/color/orange.css">
+
+        <link rel="stylesheet" href="https://blog.offby0point5.de/color/background_dark.css">
+    
+    <link rel="stylesheet" href="https://blog.offby0point5.de/font-hack-subset.css">
+
+    <meta name="description" content="Ho to host your mails on your own">
+
+    <meta property="og:description" content="Ho to host your mails on your own">
+    <meta property="og:title" content="offby0point5">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://blog.offby0point5.de/posts/mail-kanidm-setup/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="Ho to host your mails on your own">
+    <meta name="twitter:title" content="offby0point5">
+    <meta property="twitter:domain" content="blog.offby0point5.de">
+    <meta property="twitter:url" content="https://blog.offby0point5.de/posts/mail-kanidm-setup/">
+
+    </head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="/" style="text-decoration: none;">
+                    <div class="logo">
+                      
+                            offby0point5 - self-host
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+        <nav class="menu">
+            <ul class="menu__inner">
+                <li class="active"><a href="https://blog.offby0point5.de/posts">Posts</a></li>
+            
+                <li><a href="https://blog.offby0point5.de/tils">TILs</a></li>
+            
+                <li><a href="https://blog.offby0point5.de/series">series</a></li>
+            
+                <li><a href="https://blog.offby0point5.de/tags">tags</a></li>
+            
+                <li><a href="https://blog.offby0point5.de/about">about me</a></li>
+            
+                <li><a href="url-to-your-github" target="_blank" rel="noopener noreferrer">github</a></li>
+            </ul>
+        </nav>
+    
+    
+        
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://blog.offby0point5.de/posts/mail-kanidm-setup/">Set up Postfix + Dovecot + Kanidm</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2024-04-17
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://blog.offby0point5.de/tags/homelab/">#homelab</a>&nbsp;
+                <a class="post-tag" href="https://blog.offby0point5.de/tags/kanidm/">#kanidm</a>&nbsp;
+                <a class="post-tag" href="https://blog.offby0point5.de/tags/mail/">#mail</a></span>
+    
+
+        <div class="post-content">
+            <h1 id="set-up-postfix-and-dovecot-with-kanidm-user-backend">Set up Postfix and Dovecot with Kanidm user backend</h1>
+<p>I just want to self-host everything because it makes me learn at least some of the internals of these things.</p>
+<p>As I learned from <a href="https://blog.offby0point5.de/posts/mail-kanidm-setup/./nextcloud_kanidm_setup.md">fiddeling with Nextcloud's LDAP and OIDC backends</a>,
+LDAP is cool for syncing user information, but for logins I would like to use OIDC and OAuth 2.0.</p>
+<p>So I want to deploy my mail service with OAuth 2.0 and ditch LDAP as login method.</p>
+<h2 id="the-goal">The goal</h2>
+<p>In the end, there should be a Postfix+Dovecot configuration where:</p>
+<ul>
+<li>Postfix authenticates users through SASL at Dovecot</li>
+<li>Dovecot authenticates users through OAuth 2.0 at Kanidm</li>
+<li>Postfix checks for validity of sender and receiver through LDAP on Kanidm</li>
+</ul>
+<h2 id="oauth2-with-thunderbird">OAuth2 with Thunderbird</h2>
+<p>It appears that Thunderbird 115 still has no option to configure self-hosted mail servers with OAuth2 login mechanism.</p>
+<h2 id="mail-filter-solutions">Mail filter solutions</h2>
+<p>https://www.proxmox.com/en/proxmox-mail-gateway/overview</p>
+<h3 id="resources">Resources</h3>
+<p><a href="https://documentation.open-xchange.com/8.21/middleware/mail/dovecot/oauth_2.0_with_postfix_and_dovecot.html">Authentication using OAuth 2.0</a>
+https://doc.dovecot.org/configuration_manual/authentication/authentication_mechanisms/
+https://doc.dovecot.org/settings/core/#core_setting-auth_mechanisms
+https://doc.dovecot.org/configuration_manual/authentication/oauth2/
+https://wiki.mozilla.org/Thunderbird:Autoconfiguration:ConfigFileFormat</p>
+
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Thanks for reading! Read other posts?</span>
+                    <hr />
+                </div>
+                <div class="pagination__buttons">
+                        <span class="button previous">
+                            <a href="https://blog.offby0point5.de/posts/nextcloud-kanidm-setup/">
+                                <span class="button__icon">←</span>&nbsp;
+                                <span class="button__text">Set up Nextcloud + Kanidm</span>
+                            </a>
+                        </span>
+                    
+                    
+                        <span class="button next">
+                            <a href="https://blog.offby0point5.de/posts/diy-a-nas/">
+                                <span class="button__text">DIY your NAS</span>&nbsp;
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    </div>
+            </div>
+        
+    </div>
+
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright">
+                        <span>© 
+    2024
+ offby0point5</span>
+                    <span class="copyright-theme">
+                        <span class="copyright-theme-sep">:: </span>
+                        Theme: <a href="https://github.com/pawroman/zola-theme-terminimal/">Terminimal</a> by pawroman
+                    </span>
+                </div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>
