@@ -1,66 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://blog.offby0point5.de/</loc>
+        <loc>https://self-host.offby0point5.eu/</loc>
     </url>
     <url>
-        <loc>https://blog.offby0point5.de/posts/</loc>
+        <loc>https://self-host.offby0point5.eu/posts/</loc>
     </url>
     <url>
-        <loc>https://blog.offby0point5.de/posts/diy-a-nas/</loc>
+        <loc>https://self-host.offby0point5.eu/posts/diy-a-nas/</loc>
         <lastmod>2024-04-23</lastmod>
     </url>
     <url>
-        <loc>https://blog.offby0point5.de/posts/ive-got-a-nas/</loc>
+        <loc>https://self-host.offby0point5.eu/posts/ive-got-a-nas/</loc>
         <lastmod>2024-04-05</lastmod>
     </url>
     <url>
-        <loc>https://blog.offby0point5.de/posts/mail-kanidm-setup/</loc>
+        <loc>https://self-host.offby0point5.eu/posts/mail-kanidm-setup/</loc>
         <lastmod>2024-04-17</lastmod>
     </url>
     <url>
-        <loc>https://blog.offby0point5.de/posts/nextcloud-kanidm-setup/</loc>
+        <loc>https://self-host.offby0point5.eu/posts/nextcloud-kanidm-setup/</loc>
         <lastmod>2024-04-17</lastmod>
     </url>
     <url>
-        <loc>https://blog.offby0point5.de/posts/the-story-so-far/</loc>
+        <loc>https://self-host.offby0point5.eu/posts/the-story-so-far/</loc>
         <lastmod>2024-04-06</lastmod>
     </url>
     <url>
-        <loc>https://blog.offby0point5.de/projects/</loc>
+        <loc>https://self-host.offby0point5.eu/projects/</loc>
     </url>
     <url>
-        <loc>https://blog.offby0point5.de/tags/</loc>
+        <loc>https://self-host.offby0point5.eu/tags/</loc>
     </url>
     <url>
-        <loc>https://blog.offby0point5.de/tags/hardware/</loc>
+        <loc>https://self-host.offby0point5.eu/tags/hardware/</loc>
     </url>
     <url>
-        <loc>https://blog.offby0point5.de/tags/homelab/</loc>
+        <loc>https://self-host.offby0point5.eu/tags/homelab/</loc>
     </url>
     <url>
-        <loc>https://blog.offby0point5.de/tags/introduction/</loc>
+        <loc>https://self-host.offby0point5.eu/tags/introduction/</loc>
     </url>
     <url>
-        <loc>https://blog.offby0point5.de/tags/kanidm/</loc>
+        <loc>https://self-host.offby0point5.eu/tags/kanidm/</loc>
     </url>
     <url>
-        <loc>https://blog.offby0point5.de/tags/mail/</loc>
+        <loc>https://self-host.offby0point5.eu/tags/mail/</loc>
     </url>
     <url>
-        <loc>https://blog.offby0point5.de/tags/nas/</loc>
+        <loc>https://self-host.offby0point5.eu/tags/nas/</loc>
     </url>
     <url>
-        <loc>https://blog.offby0point5.de/tags/nextcloud/</loc>
+        <loc>https://self-host.offby0point5.eu/tags/nextcloud/</loc>
     </url>
     <url>
-        <loc>https://blog.offby0point5.de/technologies/</loc>
+        <loc>https://self-host.offby0point5.eu/technologies/</loc>
     </url>
     <url>
-        <loc>https://blog.offby0point5.de/tils/</loc>
+        <loc>https://self-host.offby0point5.eu/tils/</loc>
     </url>
     <url>
-        <loc>https://blog.offby0point5.de/tils/sass/</loc>
+        <loc>https://self-host.offby0point5.eu/tils/sass/</loc>
         <lastmod>2024-06-13</lastmod>
     </url>
 </urlset>

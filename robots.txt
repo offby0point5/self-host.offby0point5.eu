@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 Allow: /
-Sitemap: https://blog.offby0point5.de/sitemap.xml
+Sitemap: https://self-host.offby0point5.eu/sitemap.xml

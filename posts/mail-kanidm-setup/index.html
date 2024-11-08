@@ -8,25 +8,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="robots" content="noodp"/>
 
-    <link rel="stylesheet" href="https://blog.offby0point5.de/style.css">
-    <link rel="stylesheet" href="https://blog.offby0point5.de/color/orange.css">
+    <link rel="stylesheet" href="https://self-host.offby0point5.eu/style.css">
+    <link rel="stylesheet" href="https://self-host.offby0point5.eu/color/orange.css">
 
-        <link rel="stylesheet" href="https://blog.offby0point5.de/color/background_dark.css">
+        <link rel="stylesheet" href="https://self-host.offby0point5.eu/color/background_dark.css">
     
-    <link rel="stylesheet" href="https://blog.offby0point5.de/font-hack-subset.css">
+    <link rel="stylesheet" href="https://self-host.offby0point5.eu/font-hack-subset.css">
 
     <meta name="description" content="Ho to host your mails on your own">
 
     <meta property="og:description" content="Ho to host your mails on your own">
     <meta property="og:title" content="offby0point5">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://blog.offby0point5.de/posts/mail-kanidm-setup/">
+    <meta property="og:url" content="https://self-host.offby0point5.eu/posts/mail-kanidm-setup/">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:description" content="Ho to host your mails on your own">
     <meta name="twitter:title" content="offby0point5">
-    <meta property="twitter:domain" content="blog.offby0point5.de">
-    <meta property="twitter:url" content="https://blog.offby0point5.de/posts/mail-kanidm-setup/">
+    <meta property="twitter:domain" content="self-host.offby0point5.eu">
+    <meta property="twitter:url" content="https://self-host.offby0point5.eu/posts/mail-kanidm-setup/">
 
     </head>
 
@@ -50,17 +50,17 @@
         
         <nav class="menu">
             <ul class="menu__inner">
-                <li class="active"><a href="https://blog.offby0point5.de/posts">Posts</a></li>
+                <li class="active"><a href="https://self-host.offby0point5.eu/posts">Posts</a></li>
             
-                <li><a href="https://blog.offby0point5.de/tils">TILs</a></li>
+                <li><a href="https://self-host.offby0point5.eu/tils">TILs</a></li>
             
-                <li><a href="https://blog.offby0point5.de/series">series</a></li>
+                <li><a href="https://self-host.offby0point5.eu/series">series</a></li>
             
-                <li><a href="https://blog.offby0point5.de/tags">tags</a></li>
+                <li><a href="https://self-host.offby0point5.eu/tags">tags</a></li>
             
-                <li><a href="https://blog.offby0point5.de/about">about me</a></li>
+                <li><a href="https://self-host.offby0point5.eu/about">about me</a></li>
             
-                <li><a href="url-to-your-github" target="_blank" rel="noopener noreferrer">github</a></li>
+                <li><a href="https://github.com/offby0point5" target="_blank" rel="noopener noreferrer">github</a></li>
             </ul>
         </nav>
     
@@ -73,7 +73,7 @@
         
     <div class="post">
         
-    <h1 class="post-title"><a href="https://blog.offby0point5.de/posts/mail-kanidm-setup/">Set up Postfix + Dovecot + Kanidm</a></h1>
+    <h1 class="post-title"><a href="https://self-host.offby0point5.eu/posts/mail-kanidm-setup/">Set up Postfix + Dovecot + Kanidm</a></h1>
     <div class="post-meta-inline">
         
     <span class="post-date">
@@ -85,15 +85,15 @@
     
         <span class="post-tags-inline">
                 :: tags:&nbsp;
-                <a class="post-tag" href="https://blog.offby0point5.de/tags/homelab/">#homelab</a>&nbsp;
-                <a class="post-tag" href="https://blog.offby0point5.de/tags/kanidm/">#kanidm</a>&nbsp;
-                <a class="post-tag" href="https://blog.offby0point5.de/tags/mail/">#mail</a></span>
+                <a class="post-tag" href="https://self-host.offby0point5.eu/tags/homelab/">#homelab</a>&nbsp;
+                <a class="post-tag" href="https://self-host.offby0point5.eu/tags/kanidm/">#kanidm</a>&nbsp;
+                <a class="post-tag" href="https://self-host.offby0point5.eu/tags/mail/">#mail</a></span>
     
 
         <div class="post-content">
             <h1 id="set-up-postfix-and-dovecot-with-kanidm-user-backend">Set up Postfix and Dovecot with Kanidm user backend</h1>
 <p>I just want to self-host everything because it makes me learn at least some of the internals of these things.</p>
-<p>As I learned from <a href="https://blog.offby0point5.de/posts/mail-kanidm-setup/./nextcloud_kanidm_setup.md">fiddeling with Nextcloud's LDAP and OIDC backends</a>,
+<p>As I learned from <a href="https://self-host.offby0point5.eu/posts/mail-kanidm-setup/./nextcloud_kanidm_setup.md">fiddeling with Nextcloud's LDAP and OIDC backends</a>,
 LDAP is cool for syncing user information, but for logins I would like to use OIDC and OAuth 2.0.</p>
 <p>So I want to deploy my mail service with OAuth 2.0 and ditch LDAP as login method.</p>
 <h2 id="the-goal">The goal</h2>
@@ -124,7 +124,7 @@ https://wiki.mozilla.org/Thunderbird:Autoconfiguration:ConfigFileFormat</p>
                 </div>
                 <div class="pagination__buttons">
                         <span class="button previous">
-                            <a href="https://blog.offby0point5.de/posts/nextcloud-kanidm-setup/">
+                            <a href="https://self-host.offby0point5.eu/posts/nextcloud-kanidm-setup/">
                                 <span class="button__icon">←</span>&nbsp;
                                 <span class="button__text">Set up Nextcloud + Kanidm</span>
                             </a>
@@ -132,7 +132,7 @@ https://wiki.mozilla.org/Thunderbird:Autoconfiguration:ConfigFileFormat</p>
                     
                     
                         <span class="button next">
-                            <a href="https://blog.offby0point5.de/posts/diy-a-nas/">
+                            <a href="https://self-host.offby0point5.eu/posts/diy-a-nas/">
                                 <span class="button__text">DIY your NAS</span>&nbsp;
                                 <span class="button__icon">→</span>
                             </a>
